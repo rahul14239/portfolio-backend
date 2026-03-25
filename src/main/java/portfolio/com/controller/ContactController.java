@@ -6,7 +6,7 @@ import portfolio.com.entity.Contact;
 import portfolio.com.repository.ContactRepository;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins ="https://velvety-lokum-04c5de.netlify.app/")
 public class ContactController {
 
     private ContactRepository repository;
