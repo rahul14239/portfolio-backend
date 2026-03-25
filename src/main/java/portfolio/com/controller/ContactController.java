@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.*;
 import portfolio.com.entity.Contact;
 import portfolio.com.repository.ContactRepository;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin(origins ="https://velvety-lokum-04c5de.netlify.app/")
 public class ContactController {
@@ -13,6 +15,11 @@ public class ContactController {
 
     ContactController(ContactRepository repository){
         this.repository=repository;
+    }
+
+    @GetMapping("/contact")
+    public List<Contact> getAllMessages() {
+        return repository.findAll();
     }
 
     @GetMapping("/")
